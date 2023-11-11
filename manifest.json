@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Fuck yt adds",
+  "description": "Changes the yt page for an embeded yt page",
+  "version": "1.0",
+  "author": "progenor",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://youtube.com/*"],
+  "icons": {
+    "48": "images/png/android-launchericon-48-48.png",
+    "72": "images/png/android-launchericon-72-72.png",
+    "96": "images/png/android-launchericon-96-96.png",
+    "144": "images/png/android-launchericon-144-144.png"
+  },
+  "action": {
+    "default_popup": "html/index.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/redirect.js"],
+      "matches": ["https://youtube.com/*"]
+    }
+  ]
+}
